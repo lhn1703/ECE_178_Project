@@ -1,0 +1,39 @@
+15:31:28 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
+make all 
+Info: Building ../ECE_178_Project_app_bsp/
+D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../ECE_178_Project_app_bsp//HAL/inc -I../ECE_178_Project_app_bsp/ -I../ECE_178_Project_app_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mhw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Linking ECE_178_Project_app.elf
+nios2-elf-g++  -T'../ECE_178_Project_app_bsp//linker.x' -msys-crt0='../ECE_178_Project_app_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../ECE_178_Project_app_bsp/   -Wl,-Map=ECE_178_Project_app.map   -O0 -g -Wall   -mhw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o ECE_178_Project_app.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert ECE_178_Project_app.elf --thread_model hal --cpu_name nios2_qsys --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "D:/intelFPGA_lite/17.1/projects/ECE_178_Project" --jdi ../..//output_files/ECE_178_Project_nios.jdi --sopcinfo D:/intelFPGA_lite/17.1/projects/ECE_178_Project/software/ECE_178_Project_app_bsp/../../nios_system.sopcinfo
+Info: (ECE_178_Project_app.elf) 17 KBytes program size (code + initialized data).
+Info:                           131048 KBytes free for stack + heap.
+Info: Creating ECE_178_Project_app.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source ECE_178_Project_app.elf >ECE_178_Project_app.objdump
+[ECE_178_Project_app build complete]
+15:31:50 **** Build of configuration Nios II for project ECE_178_Project_app ****
+make all 
+Info: Building ../ECE_178_Project_app_bsp/
+D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
+[BSP build complete]
+[ECE_178_Project_app build complete]
+15:31:52 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
+make all 
+Info: Building ../ECE_178_Project_app_bsp/
+D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
+[BSP build complete]
+[ECE_178_Project_app build complete]
+15:32:35 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
+make all 
+Info: Building ../ECE_178_Project_app_bsp/
+D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
+[BSP build complete]
+[ECE_178_Project_app build complete]
+15:33:35 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
+make all 
+Info: Building ../ECE_178_Project_app_bsp/
+D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
+[BSP build complete]
+[ECE_178_Project_app build complete]

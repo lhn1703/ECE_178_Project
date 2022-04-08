@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Mar 31 15:06:09 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : ECE_178_Project_nios
+Top-level Entity Name : ECE_178_Project_nios
+Family : Cyclone IV E
+Total logic elements : 6,784
+    Total combinational functions : 5,630
+    Dedicated logic registers : 4,032
+Total registers : 4032
+Total pins : 192
+Total virtual pins : 0
+Total memory bits : 169,152
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 2
