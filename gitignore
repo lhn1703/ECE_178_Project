@@ -1,0 +1,6 @@
+# Ignore everything
+*
+
+!*.sopcinfo
+!*/output_files/*.sof
+!*/software/*.c
