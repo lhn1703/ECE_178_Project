@@ -1,6 +1,8 @@
 	nios_system u0 (
 		.clk_clk                     (<connected-to-clk_clk>),                     //                   clk.clk
 		.hex_displays_export         (<connected-to-hex_displays_export>),         //          hex_displays.export
+		.joystick_stick_1_export     (<connected-to-joystick_stick_1_export>),     //      joystick_stick_1.export
+		.joystick_stick_2_export     (<connected-to-joystick_stick_2_export>),     //      joystick_stick_2.export
 		.keys_export                 (<connected-to-keys_export>),                 //                  keys.export
 		.ledg_export                 (<connected-to-ledg_export>),                 //                  ledg.export
 		.ledr_export                 (<connected-to-ledr_export>),                 //                  ledr.export
@@ -15,6 +17,13 @@
 		.sdram_controller_wire_dqm   (<connected-to-sdram_controller_wire_dqm>),   //                      .dqm
 		.sdram_controller_wire_ras_n (<connected-to-sdram_controller_wire_ras_n>), //                      .ras_n
 		.sdram_controller_wire_we_n  (<connected-to-sdram_controller_wire_we_n>),  //                      .we_n
+		.sram_controller_wire_DQ     (<connected-to-sram_controller_wire_DQ>),     //  sram_controller_wire.DQ
+		.sram_controller_wire_ADDR   (<connected-to-sram_controller_wire_ADDR>),   //                      .ADDR
+		.sram_controller_wire_LB_N   (<connected-to-sram_controller_wire_LB_N>),   //                      .LB_N
+		.sram_controller_wire_UB_N   (<connected-to-sram_controller_wire_UB_N>),   //                      .UB_N
+		.sram_controller_wire_CE_N   (<connected-to-sram_controller_wire_CE_N>),   //                      .CE_N
+		.sram_controller_wire_OE_N   (<connected-to-sram_controller_wire_OE_N>),   //                      .OE_N
+		.sram_controller_wire_WE_N   (<connected-to-sram_controller_wire_WE_N>),   //                      .WE_N
 		.switches_export             (<connected-to-switches_export>),             //              switches.export
 		.video_vga_controller_CLK    (<connected-to-video_vga_controller_CLK>),    //  video_vga_controller.CLK
 		.video_vga_controller_HS     (<connected-to-video_vga_controller_HS>),     //                      .HS

@@ -2,23 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="VIDEO" key="selection"/>
-		<item value="false" key="casesensitive"/>
+		<item value="vby" key="selection"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
-		<item value="false" key="wholeword"/>
+		<item value="true" key="wholeword"/>
 		<list key="findhistory">
-			<item value="video"/>
-			<item value="SDRAM_0_BASE"/>
-			<item value="sdram"/>
-			<item value="pixel"/>
-			<item value="up_video"/>
-			<item value="TIMER_BASE"/>
-			<item value="timer_base"/>
-			<item value="timer_"/>
+			<item value="vy"/>
+			<item value="vx"/>
+			<item value="  "/>
+			<item value="yb"/>
+			<item value="xb"/>
+			<item value="xr"/>
+			<item value="yr"/>
+			<item value="yl"/>
 		</list>
 		<list key="replacehistory">
-			<item value="SDRAM_CONTROLLER_BASE"/>
+			<item value="vby"/>
+			<item value="vbx"/>
+			<item value="&#x09;"/>
+			<item value="\t"/>
+			<item value="yb1"/>
+			<item value="xb1"/>
+			<item value="xr1"/>
+			<item value="yr1"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

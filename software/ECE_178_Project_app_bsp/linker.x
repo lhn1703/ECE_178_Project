@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Thu Mar 31 12:54:45 PDT 2022
+ * Generated: Fri Apr 08 17:20:22 PDT 2022
  */
 
 /*
@@ -50,14 +50,12 @@
 
 MEMORY
 {
-    onchip_memory : ORIGIN = 0x0, LENGTH = 4096
-    reset : ORIGIN = 0x8000000, LENGTH = 32
-    sdram_controller : ORIGIN = 0x8000020, LENGTH = 134217696
+    reset : ORIGIN = 0x0, LENGTH = 32
+    sdram_controller : ORIGIN = 0x20, LENGTH = 134217696
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_onchip_memory = 0x0;
-__alt_mem_sdram_controller = 0x8000000;
+__alt_mem_sdram_controller = 0x0;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -309,24 +307,7 @@ SECTIONS
      *
      */
 
-    .onchip_memory : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
-    {
-        PROVIDE (_alt_partition_onchip_memory_start = ABSOLUTE(.));
-        *(.onchip_memory .onchip_memory. onchip_memory.*)
-        . = ALIGN(4);
-        PROVIDE (_alt_partition_onchip_memory_end = ABSOLUTE(.));
-    } > onchip_memory
-
-    PROVIDE (_alt_partition_onchip_memory_load_addr = LOADADDR(.onchip_memory));
-
-    /*
-     *
-     * This section's LMA is set to the .text region.
-     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
-     *
-     */
-
-    .sdram_controller LOADADDR (.onchip_memory) + SIZEOF (.onchip_memory) : AT ( LOADADDR (.onchip_memory) + SIZEOF (.onchip_memory) )
+    .sdram_controller LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
     {
         PROVIDE (_alt_partition_sdram_controller_start = ABSOLUTE(.));
         *(.sdram_controller .sdram_controller. sdram_controller.*)
@@ -386,7 +367,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x10000000;
+__alt_data_end = 0x8000000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -402,4 +383,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x10000000 );
+PROVIDE( __alt_heap_limit    = 0x8000000 );

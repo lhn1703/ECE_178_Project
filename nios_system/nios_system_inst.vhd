@@ -2,6 +2,8 @@
 		port (
 			clk_clk                     : in    std_logic                     := 'X';             -- clk
 			hex_displays_export         : out   std_logic_vector(31 downto 0);                    -- export
+			joystick_stick_1_export     : in    std_logic_vector(4 downto 0)  := (others => 'X'); -- export
+			joystick_stick_2_export     : in    std_logic_vector(4 downto 0)  := (others => 'X'); -- export
 			keys_export                 : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
 			ledg_export                 : out   std_logic_vector(8 downto 0);                     -- export
 			ledr_export                 : out   std_logic_vector(17 downto 0);                    -- export
@@ -16,6 +18,13 @@
 			sdram_controller_wire_dqm   : out   std_logic_vector(3 downto 0);                     -- dqm
 			sdram_controller_wire_ras_n : out   std_logic;                                        -- ras_n
 			sdram_controller_wire_we_n  : out   std_logic;                                        -- we_n
+			sram_controller_wire_DQ     : inout std_logic_vector(15 downto 0) := (others => 'X'); -- DQ
+			sram_controller_wire_ADDR   : out   std_logic_vector(19 downto 0);                    -- ADDR
+			sram_controller_wire_LB_N   : out   std_logic;                                        -- LB_N
+			sram_controller_wire_UB_N   : out   std_logic;                                        -- UB_N
+			sram_controller_wire_CE_N   : out   std_logic;                                        -- CE_N
+			sram_controller_wire_OE_N   : out   std_logic;                                        -- OE_N
+			sram_controller_wire_WE_N   : out   std_logic;                                        -- WE_N
 			switches_export             : in    std_logic_vector(17 downto 0) := (others => 'X'); -- export
 			video_vga_controller_CLK    : out   std_logic;                                        -- CLK
 			video_vga_controller_HS     : out   std_logic;                                        -- HS
@@ -32,6 +41,8 @@
 		port map (
 			clk_clk                     => CONNECTED_TO_clk_clk,                     --                   clk.clk
 			hex_displays_export         => CONNECTED_TO_hex_displays_export,         --          hex_displays.export
+			joystick_stick_1_export     => CONNECTED_TO_joystick_stick_1_export,     --      joystick_stick_1.export
+			joystick_stick_2_export     => CONNECTED_TO_joystick_stick_2_export,     --      joystick_stick_2.export
 			keys_export                 => CONNECTED_TO_keys_export,                 --                  keys.export
 			ledg_export                 => CONNECTED_TO_ledg_export,                 --                  ledg.export
 			ledr_export                 => CONNECTED_TO_ledr_export,                 --                  ledr.export
@@ -46,6 +57,13 @@
 			sdram_controller_wire_dqm   => CONNECTED_TO_sdram_controller_wire_dqm,   --                      .dqm
 			sdram_controller_wire_ras_n => CONNECTED_TO_sdram_controller_wire_ras_n, --                      .ras_n
 			sdram_controller_wire_we_n  => CONNECTED_TO_sdram_controller_wire_we_n,  --                      .we_n
+			sram_controller_wire_DQ     => CONNECTED_TO_sram_controller_wire_DQ,     --  sram_controller_wire.DQ
+			sram_controller_wire_ADDR   => CONNECTED_TO_sram_controller_wire_ADDR,   --                      .ADDR
+			sram_controller_wire_LB_N   => CONNECTED_TO_sram_controller_wire_LB_N,   --                      .LB_N
+			sram_controller_wire_UB_N   => CONNECTED_TO_sram_controller_wire_UB_N,   --                      .UB_N
+			sram_controller_wire_CE_N   => CONNECTED_TO_sram_controller_wire_CE_N,   --                      .CE_N
+			sram_controller_wire_OE_N   => CONNECTED_TO_sram_controller_wire_OE_N,   --                      .OE_N
+			sram_controller_wire_WE_N   => CONNECTED_TO_sram_controller_wire_WE_N,   --                      .WE_N
 			switches_export             => CONNECTED_TO_switches_export,             --              switches.export
 			video_vga_controller_CLK    => CONNECTED_TO_video_vga_controller_CLK,    --  video_vga_controller.CLK
 			video_vga_controller_HS     => CONNECTED_TO_video_vga_controller_HS,     --                      .HS

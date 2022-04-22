@@ -37,6 +37,13 @@ module ECE_178_Project_nios (
     inout [31:0] DRAM_DQ,
     output [3:0] DRAM_DQM,
     output DRAM_RAS_N, DRAM_WE_N,
+	inout [15:0] SRAM_DQ,     //  sram_controller_wire.DQ
+	output [19:0] SRAM_ADDR,   //                      .ADDR
+	output SRAM_LB_N,   //                      .LB_N
+	output SRAM_UB_N,   //                      .UB_N
+	output SRAM_CE_N,   //                      .CE_N
+	output SRAM_OE_N,   //                      .OE_N
+	output SRAM_WE_N,   // 
     input [17:0] SW,
 	output VGA_CLK,
 	output VGA_HS,
@@ -80,6 +87,13 @@ module ECE_178_Project_nios (
         .switches_export(SW),
         .reset_reset(reset_wire),
         .sdram_clk_clk(DRAM_CLK),
+		.sram_controller_wire_DQ(SRAM_DQ),     //  sram_controller_wire.DQ
+		.sram_controller_wire_ADDR(SRAM_ADDR),   //                      .ADDR
+		.sram_controller_wire_LB_N(SRAM_LB_N),   //                      .LB_N
+		.sram_controller_wire_UB_N(SRAM_UB_N),   //                      .UB_N
+		.sram_controller_wire_CE_N(SRAM_CE_N),   //                      .CE_N
+		.sram_controller_wire_OE_N(SRAM_OE_N),   //                      .OE_N
+		.sram_controller_wire_WE_N(SRAM_WE_N),   //                      .WE_N
 		.video_vga_controller_CLK(VGA_CLK),    //  video_vga_controller.CLK
 		.video_vga_controller_HS(VGA_HS),     //                      .HS
 		.video_vga_controller_VS(VGA_VS),     //                      .VS
