@@ -8,6 +8,12 @@
 			ledg_export                 : out   std_logic_vector(8 downto 0);                     -- export
 			ledr_export                 : out   std_logic_vector(17 downto 0);                    -- export
 			reset_reset                 : in    std_logic                     := 'X';             -- reset
+			rs_232_rxd                  : in    std_logic                     := 'X';             -- rxd
+			rs_232_txd                  : out   std_logic;                                        -- txd
+			sd_card_b_SD_cmd            : inout std_logic                     := 'X';             -- b_SD_cmd
+			sd_card_b_SD_dat            : inout std_logic                     := 'X';             -- b_SD_dat
+			sd_card_b_SD_dat3           : inout std_logic                     := 'X';             -- b_SD_dat3
+			sd_card_o_SD_clock          : out   std_logic;                                        -- o_SD_clock
 			sdram_clk_clk               : out   std_logic;                                        -- clk
 			sdram_controller_wire_addr  : out   std_logic_vector(12 downto 0);                    -- addr
 			sdram_controller_wire_ba    : out   std_logic_vector(1 downto 0);                     -- ba
@@ -33,7 +39,8 @@
 			video_vga_controller_SYNC   : out   std_logic;                                        -- SYNC
 			video_vga_controller_R      : out   std_logic_vector(7 downto 0);                     -- R
 			video_vga_controller_G      : out   std_logic_vector(7 downto 0);                     -- G
-			video_vga_controller_B      : out   std_logic_vector(7 downto 0)                      -- B
+			video_vga_controller_B      : out   std_logic_vector(7 downto 0);                     -- B
+			piezo_pwm_export            : out   std_logic                                         -- export
 		);
 	end component nios_system;
 
@@ -47,6 +54,12 @@
 			ledg_export                 => CONNECTED_TO_ledg_export,                 --                  ledg.export
 			ledr_export                 => CONNECTED_TO_ledr_export,                 --                  ledr.export
 			reset_reset                 => CONNECTED_TO_reset_reset,                 --                 reset.reset
+			rs_232_rxd                  => CONNECTED_TO_rs_232_rxd,                  --                rs_232.rxd
+			rs_232_txd                  => CONNECTED_TO_rs_232_txd,                  --                      .txd
+			sd_card_b_SD_cmd            => CONNECTED_TO_sd_card_b_SD_cmd,            --               sd_card.b_SD_cmd
+			sd_card_b_SD_dat            => CONNECTED_TO_sd_card_b_SD_dat,            --                      .b_SD_dat
+			sd_card_b_SD_dat3           => CONNECTED_TO_sd_card_b_SD_dat3,           --                      .b_SD_dat3
+			sd_card_o_SD_clock          => CONNECTED_TO_sd_card_o_SD_clock,          --                      .o_SD_clock
 			sdram_clk_clk               => CONNECTED_TO_sdram_clk_clk,               --             sdram_clk.clk
 			sdram_controller_wire_addr  => CONNECTED_TO_sdram_controller_wire_addr,  -- sdram_controller_wire.addr
 			sdram_controller_wire_ba    => CONNECTED_TO_sdram_controller_wire_ba,    --                      .ba
@@ -72,6 +85,7 @@
 			video_vga_controller_SYNC   => CONNECTED_TO_video_vga_controller_SYNC,   --                      .SYNC
 			video_vga_controller_R      => CONNECTED_TO_video_vga_controller_R,      --                      .R
 			video_vga_controller_G      => CONNECTED_TO_video_vga_controller_G,      --                      .G
-			video_vga_controller_B      => CONNECTED_TO_video_vga_controller_B       --                      .B
+			video_vga_controller_B      => CONNECTED_TO_video_vga_controller_B,      --                      .B
+			piezo_pwm_export            => CONNECTED_TO_piezo_pwm_export             --             piezo_pwm.export
 		);
 

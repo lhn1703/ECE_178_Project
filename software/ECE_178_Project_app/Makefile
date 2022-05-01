@@ -142,7 +142,8 @@ ACDS_VERSION := 17.1
 ELF := ECE_178_Project_app.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := main.c
+C_SRCS += main.c
+C_SRCS += piezo.c
 CXX_SRCS :=
 ASM_SRCS :=
 

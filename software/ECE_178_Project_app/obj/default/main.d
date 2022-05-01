@@ -7,7 +7,10 @@ obj/default/main.o: main.c ../ECE_178_Project_app_bsp//HAL/inc/io.h \
  ../ECE_178_Project_app_bsp//HAL/inc/sys/alt_llist.h \
  ../ECE_178_Project_app_bsp//HAL/inc/priv/alt_dev_llist.h \
  ../ECE_178_Project_app_bsp//drivers/inc/altera_avalon_pio_regs.h \
- ../ECE_178_Project_app_bsp//drivers/inc/altera_avalon_timer_regs.h
+ ../ECE_178_Project_app_bsp//drivers/inc/altera_avalon_timer_regs.h \
+ ../ECE_178_Project_app_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h \
+ piezo.h ../ECE_178_Project_app_bsp//HAL/inc/sys/alt_irq.h \
+ ../ECE_178_Project_app_bsp//HAL/inc/nios2.h
 
 ../ECE_178_Project_app_bsp//HAL/inc/io.h:
 
@@ -30,3 +33,11 @@ obj/default/main.o: main.c ../ECE_178_Project_app_bsp//HAL/inc/io.h \
 ../ECE_178_Project_app_bsp//drivers/inc/altera_avalon_pio_regs.h:
 
 ../ECE_178_Project_app_bsp//drivers/inc/altera_avalon_timer_regs.h:
+
+../ECE_178_Project_app_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:
+
+piezo.h:
+
+../ECE_178_Project_app_bsp//HAL/inc/sys/alt_irq.h:
+
+../ECE_178_Project_app_bsp//HAL/inc/nios2.h:

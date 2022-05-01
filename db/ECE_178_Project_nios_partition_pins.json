@@ -636,6 +636,34 @@
 					"strict" : false
 				},
 				{
+					"name" : "SD_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "UART_TXD",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[3]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[4]",
+					"strict" : false
+				},
+				{
 					"name" : "DRAM_DQ[0]",
 					"strict" : false
 				},
@@ -828,6 +856,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "SD_CMD",
+					"strict" : false
+				},
+				{
+					"name" : "SD_DAT[0]",
+					"strict" : false
+				},
+				{
 					"name" : "KEY[1]",
 					"strict" : false
 				},
@@ -913,6 +949,10 @@
 				},
 				{
 					"name" : "SW[14]",
+					"strict" : false
+				},
+				{
+					"name" : "UART_RXD",
 					"strict" : false
 				},
 				{

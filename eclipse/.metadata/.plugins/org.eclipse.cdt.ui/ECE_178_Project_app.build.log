@@ -1,9 +1,9 @@
-16:20:42 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
+11:24:51 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
 make all 
 Info: Building ../ECE_178_Project_app_bsp/
 D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
 [BSP build complete]
 [ECE_178_Project_app build complete]
 
-16:20:44 Build Finished (took 1s.919ms)
+11:24:53 Build Finished (took 2s.175ms)
 

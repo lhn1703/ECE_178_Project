@@ -208,6 +208,13 @@ GENERATED_C_LIB_SRCS += alt_sys_init.c
 # used to build each file.
 #-------------------------------------------------------------------------------
 
+# altera_up_sd_card_avalon_interface_driver sources root 
+Altera_UP_SD_Card_Avalon_Interface_driver_SRCS_ROOT := drivers
+
+# altera_up_sd_card_avalon_interface_driver sources 
+Altera_UP_SD_Card_Avalon_Interface_driver_C_LIB_SRCS := \
+	$(Altera_UP_SD_Card_Avalon_Interface_driver_SRCS_ROOT)/src/Altera_UP_SD_Card_Avalon_Interface.c
+
 # altera_avalon_jtag_uart_driver sources root 
 altera_avalon_jtag_uart_driver_SRCS_ROOT := drivers
 
@@ -231,6 +238,17 @@ altera_avalon_timer_driver_C_LIB_SRCS := \
 	$(altera_avalon_timer_driver_SRCS_ROOT)/src/altera_avalon_timer_sc.c \
 	$(altera_avalon_timer_driver_SRCS_ROOT)/src/altera_avalon_timer_ts.c \
 	$(altera_avalon_timer_driver_SRCS_ROOT)/src/altera_avalon_timer_vars.c
+
+# altera_avalon_uart_driver sources root 
+altera_avalon_uart_driver_SRCS_ROOT := drivers
+
+# altera_avalon_uart_driver sources 
+altera_avalon_uart_driver_C_LIB_SRCS := \
+	$(altera_avalon_uart_driver_SRCS_ROOT)/src/altera_avalon_uart_fd.c \
+	$(altera_avalon_uart_driver_SRCS_ROOT)/src/altera_avalon_uart_init.c \
+	$(altera_avalon_uart_driver_SRCS_ROOT)/src/altera_avalon_uart_ioctl.c \
+	$(altera_avalon_uart_driver_SRCS_ROOT)/src/altera_avalon_uart_read.c \
+	$(altera_avalon_uart_driver_SRCS_ROOT)/src/altera_avalon_uart_write.c
 
 # altera_nios2_qsys_hal_driver sources root 
 altera_nios2_qsys_hal_driver_SRCS_ROOT := HAL
@@ -345,8 +363,10 @@ hal_C_LIB_SRCS := \
 
 # Assemble all component C source files 
 COMPONENT_C_LIB_SRCS += \
+	$(Altera_UP_SD_Card_Avalon_Interface_driver_C_LIB_SRCS) \
 	$(altera_avalon_jtag_uart_driver_C_LIB_SRCS) \
 	$(altera_avalon_timer_driver_C_LIB_SRCS) \
+	$(altera_avalon_uart_driver_C_LIB_SRCS) \
 	$(altera_nios2_qsys_hal_driver_C_LIB_SRCS) \
 	$(altera_up_avalon_video_rgb_resampler_driver_C_LIB_SRCS) \
 	$(avalon_video_pixel_buffer_dma_driver_C_LIB_SRCS) \

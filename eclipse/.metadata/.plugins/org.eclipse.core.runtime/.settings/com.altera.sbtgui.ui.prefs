@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+newApplicationWizardPage.defaultLocation=D\:\\intelFPGA_lite\\17.1\\projects\\ECE_178_Project\\software\\HelloWorld
 newSoftwareExampleWizardPage.defaultLocation=D\:\\intelFPGA_lite\\17.1\\projects\\ECE_178_Project\\software\\ECE_178_Project_app
 newSoftwareExampleWizardPage.sopcinfoFile=D\:\\intelFPGA_lite\\17.1\\projects\\ECE_178_Project\\nios_system.sopcinfo
 newSoftwareExampleWizardPage2.newBspLocation=D\:\\intelFPGA_lite\\17.1\\projects\\ECE_178_Project\\software\\ECE_178_Project_app_bsp

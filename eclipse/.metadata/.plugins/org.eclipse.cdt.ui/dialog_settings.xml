@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="Default C source template" key="LastUsedSourceTemplate"/>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item value="301" key="size.height"/>
+		<item value="1016" key="size.width"/>
+	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="NewClassWizardPage">
 	</section>
 	<section name="RenameInformationPopup">
 	</section>

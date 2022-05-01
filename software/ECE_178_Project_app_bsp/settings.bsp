@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Apr 22, 2022 2:59:33 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1650664773527</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Apr 25, 2022 12:05:49 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1650913549045</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>D:\intelFPGA_lite\17.1\projects\ECE_178_Project\software\ECE_178_Project_app_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios_system.sopcinfo</SopcDesignFile>
@@ -875,6 +875,30 @@
                 <Group>none</Group>
         </Setting>
         <Setting>
+                <SettingName>altera_avalon_uart_driver.enable_small_driver</SettingName>
+                <Identifier>ALTERA_AVALON_UART_SMALL</Identifier>
+                <Type>BooleanDefineOnly</Type>
+                <Value>false</Value>
+                <DefaultValue>false</DefaultValue>
+                <DestinationFile>public_mk_define</DestinationFile>
+                <Description>Small-footprint (polled mode) driver</Description>
+                <Restrictions>none</Restrictions>
+                <Enabled>false</Enabled>
+                <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </Setting>
+        <Setting>
+                <SettingName>altera_avalon_uart_driver.enable_ioctl</SettingName>
+                <Identifier>ALTERA_AVALON_UART_USE_IOCTL</Identifier>
+                <Type>BooleanDefineOnly</Type>
+                <Value>false</Value>
+                <DefaultValue>false</DefaultValue>
+                <DestinationFile>public_mk_define</DestinationFile>
+                <Description>Enable driver ioctl() support. This feature is not compatible with the 'small' driver; ioctl() support will not be compiled if either the UART 'enable_small_driver' or HAL 'enable_reduced_device_drivers' settings are enabled.</Description>
+                <Restrictions>none</Restrictions>
+                <Enabled>false</Enabled>
+                <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </Setting>
+        <Setting>
                 <SettingName>altera_avalon_jtag_uart_driver.enable_small_driver</SettingName>
                 <Identifier>ALTERA_AVALON_JTAG_UART_SMALL</Identifier>
                 <Type>BooleanDefineOnly</Type>
@@ -911,80 +935,116 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>sd_card</slaveDescriptor>
+                <addressRange>0x08201000 - 0x082013FF</addressRange>
+                <addressSpan>1024</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>timer_5</slaveDescriptor>
+                <addressRange>0x08201400 - 0x0820141F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>timer_4</slaveDescriptor>
+                <addressRange>0x08201420 - 0x0820143F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>timer_3</slaveDescriptor>
+                <addressRange>0x08201440 - 0x0820145F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>rs_232</slaveDescriptor>
+                <addressRange>0x08201460 - 0x0820147F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>printable</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>timer_2</slaveDescriptor>
-                <addressRange>0x08201000 - 0x0820101F</addressRange>
+                <addressRange>0x08201480 - 0x0820149F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>timer_1</slaveDescriptor>
-                <addressRange>0x08201020 - 0x0820103F</addressRange>
+                <addressRange>0x082014A0 - 0x082014BF</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>timer_0</slaveDescriptor>
-                <addressRange>0x08201040 - 0x0820105F</addressRange>
+                <addressRange>0x082014C0 - 0x082014DF</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>piezo_pwm</slaveDescriptor>
+                <addressRange>0x082014E0 - 0x082014EF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>joystick_stick_2</slaveDescriptor>
-                <addressRange>0x08201060 - 0x0820106F</addressRange>
+                <addressRange>0x082014F0 - 0x082014FF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>joystick_stick_1</slaveDescriptor>
-                <addressRange>0x08201070 - 0x0820107F</addressRange>
+                <addressRange>0x08201500 - 0x0820150F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>switches</slaveDescriptor>
-                <addressRange>0x08201080 - 0x0820108F</addressRange>
+                <addressRange>0x08201510 - 0x0820151F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>keys</slaveDescriptor>
-                <addressRange>0x08201090 - 0x0820109F</addressRange>
+                <addressRange>0x08201520 - 0x0820152F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>hex_displays</slaveDescriptor>
-                <addressRange>0x082010A0 - 0x082010AF</addressRange>
+                <addressRange>0x08201530 - 0x0820153F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ledg</slaveDescriptor>
-                <addressRange>0x082010B0 - 0x082010BF</addressRange>
+                <addressRange>0x08201540 - 0x0820154F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ledr</slaveDescriptor>
-                <addressRange>0x082010C0 - 0x082010CF</addressRange>
+                <addressRange>0x08201550 - 0x0820155F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pixel_buffer_dma</slaveDescriptor>
-                <addressRange>0x082010D0 - 0x082010DF</addressRange>
+                <addressRange>0x08201560 - 0x0820156F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x082010E0 - 0x082010E7</addressRange>
+                <addressRange>0x08201570 - 0x08201577</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pixel_rgb_resampler</slaveDescriptor>
-                <addressRange>0x082010E8 - 0x082010EB</addressRange>
+                <addressRange>0x08201578 - 0x0820157B</addressRange>
                 <addressSpan>4</addressSpan>
                 <attributes/>
         </MemoryMap>

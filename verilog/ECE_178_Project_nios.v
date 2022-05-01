@@ -31,6 +31,7 @@ module ECE_178_Project_nios (
     input [3:0] KEY,
     output [8:0] LEDG,
     output [17:0] LEDR,
+	inout [4:0] GPIO,
     output [12:0] DRAM_ADDR,
     output [1:0] DRAM_BA,
     output DRAM_CAS_N, DRAM_CKE, DRAM_CS_N, DRAM_CLK,
@@ -52,7 +53,12 @@ module ECE_178_Project_nios (
 	output VGA_SYNC,
 	output [7:0] VGA_R,
 	output [7:0] VGA_G,
-	output [7:0] VGA_B
+	output [7:0] VGA_B,
+	inout SD_CMD,
+	output SD_CLK,
+	inout [3:0] SD_DAT,
+	input UART_RXD,
+	output UART_TXD
     );
 
     wire [31:0] hex_display_32;
@@ -72,9 +78,17 @@ module ECE_178_Project_nios (
     nios_system nios2 (
         .clk_clk(CLOCK_50),
         .hex_displays_export(hex_display_32),
+		.joystick_stick_1_export(GPIO[1:0]),     //      joystick_stick_1.export
+		.joystick_stick_2_export(GPIO[3:2]),     //      joystick_stick_2.export
         .keys_export(~KEY), //pushbuttons are logic LOW when pressed
         .ledg_export(LEDG),
         .ledr_export(LEDR),
+		.piezo_pwm_export(GPIO[4]),
+        .switches_export(SW),
+        .reset_reset(reset_wire),
+		.rs_232_rxd(UART_RXD),
+		.rs_232_txd(UART_TXD),
+        .sdram_clk_clk(DRAM_CLK),
         .sdram_controller_wire_addr(DRAM_ADDR),
         .sdram_controller_wire_ba(DRAM_BA),
         .sdram_controller_wire_cas_n(DRAM_CAS_N),
@@ -84,23 +98,24 @@ module ECE_178_Project_nios (
         .sdram_controller_wire_dqm(DRAM_DQM),
         .sdram_controller_wire_ras_n(DRAM_RAS_N),
         .sdram_controller_wire_we_n(DRAM_WE_N),
-        .switches_export(SW),
-        .reset_reset(reset_wire),
-        .sdram_clk_clk(DRAM_CLK),
-		.sram_controller_wire_DQ(SRAM_DQ),     //  sram_controller_wire.DQ
-		.sram_controller_wire_ADDR(SRAM_ADDR),   //                      .ADDR
-		.sram_controller_wire_LB_N(SRAM_LB_N),   //                      .LB_N
-		.sram_controller_wire_UB_N(SRAM_UB_N),   //                      .UB_N
-		.sram_controller_wire_CE_N(SRAM_CE_N),   //                      .CE_N
-		.sram_controller_wire_OE_N(SRAM_OE_N),   //                      .OE_N
-		.sram_controller_wire_WE_N(SRAM_WE_N),   //                      .WE_N
-		.video_vga_controller_CLK(VGA_CLK),    //  video_vga_controller.CLK
-		.video_vga_controller_HS(VGA_HS),     //                      .HS
-		.video_vga_controller_VS(VGA_VS),     //                      .VS
-		.video_vga_controller_BLANK(VGA_BLANK),  //                      .BLANK
-		.video_vga_controller_SYNC(VGA_SYNC),   //                      .SYNC
-		.video_vga_controller_R(VGA_R),      //                      .R
-		.video_vga_controller_G(VGA_G),      //                      .G
-		.video_vga_controller_B(VGA_B)       //                      .B
+		.sd_card_b_SD_cmd(SD_CMD),
+		.sd_card_b_SD_dat(SD_DAT[0]),
+		.sd_card_b_SD_dat3(SD_DAT[3]),
+		.sd_card_o_SD_clock(SD_CLK),
+		.sram_controller_wire_DQ(SRAM_DQ),
+		.sram_controller_wire_ADDR(SRAM_ADDR),
+		.sram_controller_wire_LB_N(SRAM_LB_N),
+		.sram_controller_wire_UB_N(SRAM_UB_N),
+		.sram_controller_wire_CE_N(SRAM_CE_N),
+		.sram_controller_wire_OE_N(SRAM_OE_N),
+		.sram_controller_wire_WE_N(SRAM_WE_N),
+		.video_vga_controller_CLK(VGA_CLK),
+		.video_vga_controller_HS(VGA_HS),
+		.video_vga_controller_VS(VGA_VS),
+		.video_vga_controller_BLANK(VGA_BLANK),
+		.video_vga_controller_SYNC(VGA_SYNC),
+		.video_vga_controller_R(VGA_R),
+		.video_vga_controller_G(VGA_G),
+		.video_vga_controller_B(VGA_B)
         );
 endmodule

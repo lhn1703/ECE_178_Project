@@ -1406,6 +1406,20 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
+					<resource project-relative-path="drivers/src/altera_avalon_uart_fd.c">
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/drivers/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
+						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
+						<entry kind="macro" name="__hal__" value=""/>
+					</resource>
 					<resource project-relative-path="HAL/src/alt_wait.c">
 						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -2036,6 +2050,20 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
+					<resource project-relative-path="drivers/src/altera_avalon_uart_write.c">
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/drivers/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
+						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
+						<entry kind="macro" name="__hal__" value=""/>
+					</resource>
 					<resource project-relative-path="HAL/src/alt_dcache_flush.c">
 						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -2190,6 +2218,20 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
+					<resource project-relative-path="piezo.c">
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/drivers/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
+						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
+						<entry kind="macro" name="__hal__" value=""/>
+					</resource>
 					<resource project-relative-path="drivers/src/altera_up_avalon_video_character_buffer_with_dma.c">
 						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -2232,7 +2274,35 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
+					<resource project-relative-path="drivers/src/altera_avalon_uart_init.c">
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/drivers/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
+						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
+						<entry kind="macro" name="__hal__" value=""/>
+					</resource>
 					<resource project-relative-path="HAL/src/alt_open.c">
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/drivers/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
+						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
+						<entry kind="macro" name="__hal__" value=""/>
+					</resource>
+					<resource project-relative-path="drivers/src/Altera_UP_SD_Card_Avalon_Interface.c">
 						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2484,6 +2554,20 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
+					<resource project-relative-path="drivers/src/altera_avalon_uart_read.c">
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/drivers/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
+						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
+						<entry kind="macro" name="__hal__" value=""/>
+					</resource>
 					<resource project-relative-path="HAL/src/alt_putstr.c">
 						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -2569,6 +2653,20 @@
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
 					<resource project-relative-path="HAL/src/alt_irq_vars.c">
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/ECE_178_Project_app_bsp/drivers/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
+						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
+						<entry kind="macro" name="__hal__" value=""/>
+					</resource>
+					<resource project-relative-path="drivers/src/altera_avalon_uart_ioctl.c">
 						<entry kind="includePath" name="/ECE_178_Project_app_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
