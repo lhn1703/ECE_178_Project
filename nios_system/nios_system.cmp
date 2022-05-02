@@ -9,8 +9,8 @@
 			ledr_export                 : out   std_logic_vector(17 downto 0);                    -- export
 			piezo_pwm_export            : out   std_logic;                                        -- export
 			reset_reset                 : in    std_logic                     := 'X';             -- reset
-			rs_232_rxd                  : in    std_logic                     := 'X';             -- rxd
-			rs_232_txd                  : out   std_logic;                                        -- txd
+			rs232_RXD                   : in    std_logic                     := 'X';             -- RXD
+			rs232_TXD                   : out   std_logic;                                        -- TXD
 			sd_card_b_SD_cmd            : inout std_logic                     := 'X';             -- b_SD_cmd
 			sd_card_b_SD_dat            : inout std_logic                     := 'X';             -- b_SD_dat
 			sd_card_b_SD_dat3           : inout std_logic                     := 'X';             -- b_SD_dat3

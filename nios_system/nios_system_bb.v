@@ -7,9 +7,8 @@ module nios_system (
 	keys_export,
 	ledg_export,
 	ledr_export,
+	piezo_pwm_export,
 	reset_reset,
-	rs_232_rxd,
-	rs_232_txd,
 	sd_card_b_SD_cmd,
 	sd_card_b_SD_dat,
 	sd_card_b_SD_dat3,
@@ -40,7 +39,8 @@ module nios_system (
 	video_vga_controller_R,
 	video_vga_controller_G,
 	video_vga_controller_B,
-	piezo_pwm_export);	
+	rs232_RXD,
+	rs232_TXD);	
 
 	input		clk_clk;
 	output	[31:0]	hex_displays_export;
@@ -49,9 +49,8 @@ module nios_system (
 	input	[3:0]	keys_export;
 	output	[8:0]	ledg_export;
 	output	[17:0]	ledr_export;
+	output		piezo_pwm_export;
 	input		reset_reset;
-	input		rs_232_rxd;
-	output		rs_232_txd;
 	inout		sd_card_b_SD_cmd;
 	inout		sd_card_b_SD_dat;
 	inout		sd_card_b_SD_dat3;
@@ -82,5 +81,6 @@ module nios_system (
 	output	[7:0]	video_vga_controller_R;
 	output	[7:0]	video_vga_controller_G;
 	output	[7:0]	video_vga_controller_B;
-	output		piezo_pwm_export;
+	input		rs232_RXD;
+	output		rs232_TXD;
 endmodule

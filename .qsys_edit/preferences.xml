@@ -9,7 +9,8 @@
    <name preferredWidth="305" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
- <window width="1938" height="1038" x="-9" y="-9" />
+ <library
+   expandedCategories="Library,Library/University Program/Communications,Library/University Program,Project" />
+ <window width="1920" height="1020" x="0" y="0" />
  <generation path="_PROJECT_NAME_" />
 </preferences>

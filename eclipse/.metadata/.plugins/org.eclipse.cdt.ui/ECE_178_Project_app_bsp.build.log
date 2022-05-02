@@ -1,6 +1,6 @@
-12:05:41 **** Clean-only build of configuration Nios II for project ECE_178_Project_app_bsp ****
+13:04:20 **** Clean-only build of configuration Nios II for project ECE_178_Project_app_bsp ****
 make clean 
 [BSP clean complete]
 
-12:05:42 Build Finished (took 924ms)
+13:04:21 Build Finished (took 523ms)
 

@@ -1,148 +1,95 @@
-12:29:05 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
+13:21:51 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
 make all 
 Info: Building ../ECE_178_Project_app_bsp/
 D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
 [BSP build complete]
 Info: Compiling main.c to obj/default/main.o
 nios2-elf-gcc -xc -MP -MMD -c -I../ECE_178_Project_app_bsp//HAL/inc -I../ECE_178_Project_app_bsp/ -I../ECE_178_Project_app_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mhw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c:78:42: warning: excess elements in array initializer
+   8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1.5, 8, 8, 4, 4, 4, 4, 4, 4,
+                                          ^
+main.c:78:42: note: (near initialization for 'pokemon_song_duration')
+main.c:78:45: warning: excess elements in array initializer
+   8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1.5, 8, 8, 4, 4, 4, 4, 4, 4,
+                                             ^
+main.c:78:45: note: (near initialization for 'pokemon_song_duration')
+main.c:78:50: warning: excess elements in array initializer
+   8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1.5, 8, 8, 4, 4, 4, 4, 4, 4,
+                                                  ^
+main.c:78:50: note: (near initialization for 'pokemon_song_duration')
+main.c:78:53: warning: excess elements in array initializer
+   8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1.5, 8, 8, 4, 4, 4, 4, 4, 4,
+                                                     ^
+main.c:78:53: note: (near initialization for 'pokemon_song_duration')
+main.c:78:56: warning: excess elements in array initializer
+   8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1.5, 8, 8, 4, 4, 4, 4, 4, 4,
+                                                        ^
+main.c:78:56: note: (near initialization for 'pokemon_song_duration')
+main.c:78:59: warning: excess elements in array initializer
+   8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1.5, 8, 8, 4, 4, 4, 4, 4, 4,
+                                                           ^
+main.c:78:59: note: (near initialization for 'pokemon_song_duration')
+main.c:78:62: warning: excess elements in array initializer
+   8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1.5, 8, 8, 4, 4, 4, 4, 4, 4,
+                                                              ^
+main.c:78:62: note: (near initialization for 'pokemon_song_duration')
+main.c:78:65: warning: excess elements in array initializer
+   8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1.5, 8, 8, 4, 4, 4, 4, 4, 4,
+                                                                 ^
+main.c:78:65: note: (near initialization for 'pokemon_song_duration')
+main.c:78:68: warning: excess elements in array initializer
+   8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1.5, 8, 8, 4, 4, 4, 4, 4, 4,
+                                                                    ^
+main.c:78:68: note: (near initialization for 'pokemon_song_duration')
+main.c:78:71: warning: excess elements in array initializer
+   8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1.5, 8, 8, 4, 4, 4, 4, 4, 4,
+                                                                       ^
+main.c:78:71: note: (near initialization for 'pokemon_song_duration')
+main.c:79:3: warning: excess elements in array initializer
+   4, 4, 4, 4, 4, 4, 1.5 };
+   ^
+main.c:79:3: note: (near initialization for 'pokemon_song_duration')
+main.c:79:6: warning: excess elements in array initializer
+   4, 4, 4, 4, 4, 4, 1.5 };
+      ^
+main.c:79:6: note: (near initialization for 'pokemon_song_duration')
+main.c:79:9: warning: excess elements in array initializer
+   4, 4, 4, 4, 4, 4, 1.5 };
+         ^
+main.c:79:9: note: (near initialization for 'pokemon_song_duration')
+main.c:79:12: warning: excess elements in array initializer
+   4, 4, 4, 4, 4, 4, 1.5 };
+            ^
+main.c:79:12: note: (near initialization for 'pokemon_song_duration')
+main.c:79:15: warning: excess elements in array initializer
+   4, 4, 4, 4, 4, 4, 1.5 };
+               ^
+main.c:79:15: note: (near initialization for 'pokemon_song_duration')
+main.c:79:18: warning: excess elements in array initializer
+   4, 4, 4, 4, 4, 4, 1.5 };
+                  ^
+main.c:79:18: note: (near initialization for 'pokemon_song_duration')
+main.c:79:21: warning: excess elements in array initializer
+   4, 4, 4, 4, 4, 4, 1.5 };
+                     ^
+main.c:79:21: note: (near initialization for 'pokemon_song_duration')
 main.c: In function 'main':
-main.c:90:19: warning: implicit declaration of function 'time' [-Wimplicit-function-declaration]
+main.c:106:19: warning: implicit declaration of function 'time' [-Wimplicit-function-declaration]
   srand((unsigned) time(&t));
                    ^
+main.c: In function 'timer_2_int_init':
+main.c:124:2: warning: implicit declaration of function 'alt_ic_isr_register' [-Wimplicit-function-declaration]
+  alt_ic_isr_register(TIMER_2_IRQ_INTERRUPT_CONTROLLER_ID, TIMER_2_IRQ,
+  ^
 Info: Linking ECE_178_Project_app.elf
 nios2-elf-g++  -T'../ECE_178_Project_app_bsp//linker.x' -msys-crt0='../ECE_178_Project_app_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../ECE_178_Project_app_bsp/   -Wl,-Map=ECE_178_Project_app.map   -O0 -g -Wall   -mhw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o ECE_178_Project_app.elf obj/default/main.o obj/default/piezo.o -lm -msys-lib=m
-nios2-elf-insert ECE_178_Project_app.elf --thread_model hal --cpu_name nios2_qsys --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "D:/intelFPGA_lite/17.1/projects/ECE_178_Project" --jdi ../..//output_files/ECE_178_Project_nios.jdi --sopcinfo D:/intelFPGA_lite/17.1/projects/ECE_178_Project/software/ECE_178_Project_app_bsp/../../nios_system.sopcinfo
-Info: (ECE_178_Project_app.elf) 60 KBytes program size (code + initialized data).
-Info:                           131005 KBytes free for stack + heap.
-Info: Creating ECE_178_Project_app.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source ECE_178_Project_app.elf >ECE_178_Project_app.objdump
-[ECE_178_Project_app build complete]
-12:53:26 **** Build of configuration Nios II for project ECE_178_Project_app ****
-make all 
-Info: Building ../ECE_178_Project_app_bsp/
-D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
-[BSP build complete]
-[ECE_178_Project_app build complete]
-12:53:28 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
-make all 
-Info: Building ../ECE_178_Project_app_bsp/
-D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
-[BSP build complete]
-[ECE_178_Project_app build complete]
-11:12:44 **** Build of configuration Nios II for project ECE_178_Project_app ****
-make all 
-Info: Building ../ECE_178_Project_app_bsp/
-D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
-[BSP build complete]
-[ECE_178_Project_app build complete]
-11:13:05 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
-make all 
-Info: Building ../ECE_178_Project_app_bsp/
-D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
-[BSP build complete]
-[ECE_178_Project_app build complete]
-11:24:00 **** Build of configuration Nios II for project ECE_178_Project_app ****
-make all 
-Info: Building ../ECE_178_Project_app_bsp/
-D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../ECE_178_Project_app_bsp//HAL/inc -I../ECE_178_Project_app_bsp/ -I../ECE_178_Project_app_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mhw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c:86:9: warning: excess elements in array initializer
-         4, 1.5,
-         ^
-main.c:86:9: note: (near initialization for 'pokemon_song_duration')
-main.c:86:12: warning: excess elements in array initializer
-         4, 1.5,
-            ^
-main.c:86:12: note: (near initialization for 'pokemon_song_duration')
-main.c:87:9: warning: excess elements in array initializer
-         8, 8, 4, 4, 4, 4,
-         ^
-main.c:87:9: note: (near initialization for 'pokemon_song_duration')
-main.c:87:12: warning: excess elements in array initializer
-         8, 8, 4, 4, 4, 4,
-            ^
-main.c:87:12: note: (near initialization for 'pokemon_song_duration')
-main.c:87:15: warning: excess elements in array initializer
-         8, 8, 4, 4, 4, 4,
-               ^
-main.c:87:15: note: (near initialization for 'pokemon_song_duration')
-main.c:87:18: warning: excess elements in array initializer
-         8, 8, 4, 4, 4, 4,
-                  ^
-main.c:87:18: note: (near initialization for 'pokemon_song_duration')
-main.c:87:21: warning: excess elements in array initializer
-         8, 8, 4, 4, 4, 4,
-                     ^
-main.c:87:21: note: (near initialization for 'pokemon_song_duration')
-main.c:87:24: warning: excess elements in array initializer
-         8, 8, 4, 4, 4, 4,
-                        ^
-main.c:87:24: note: (near initialization for 'pokemon_song_duration')
-main.c:88:9: warning: excess elements in array initializer
-         4, 4, 4, 4, 4, 4, 4, 4,
-         ^
-main.c:88:9: note: (near initialization for 'pokemon_song_duration')
-main.c:88:12: warning: excess elements in array initializer
-         4, 4, 4, 4, 4, 4, 4, 4,
-            ^
-main.c:88:12: note: (near initialization for 'pokemon_song_duration')
-main.c:88:15: warning: excess elements in array initializer
-         4, 4, 4, 4, 4, 4, 4, 4,
-               ^
-main.c:88:15: note: (near initialization for 'pokemon_song_duration')
-main.c:88:18: warning: excess elements in array initializer
-         4, 4, 4, 4, 4, 4, 4, 4,
-                  ^
-main.c:88:18: note: (near initialization for 'pokemon_song_duration')
-main.c:88:21: warning: excess elements in array initializer
-         4, 4, 4, 4, 4, 4, 4, 4,
-                     ^
-main.c:88:21: note: (near initialization for 'pokemon_song_duration')
-main.c:88:24: warning: excess elements in array initializer
-         4, 4, 4, 4, 4, 4, 4, 4,
-                        ^
-main.c:88:24: note: (near initialization for 'pokemon_song_duration')
-main.c:88:27: warning: excess elements in array initializer
-         4, 4, 4, 4, 4, 4, 4, 4,
-                           ^
-main.c:88:27: note: (near initialization for 'pokemon_song_duration')
-main.c:88:30: warning: excess elements in array initializer
-         4, 4, 4, 4, 4, 4, 4, 4,
-                              ^
-main.c:88:30: note: (near initialization for 'pokemon_song_duration')
-main.c:89:9: warning: excess elements in array initializer
-         1.5};
-         ^
-main.c:89:9: note: (near initialization for 'pokemon_song_duration')
-main.c: In function 'main':
-main.c:117:19: warning: implicit declaration of function 'time' [-Wimplicit-function-declaration]
-  srand((unsigned) time(&t));
-                   ^
-Info: Linking ECE_178_Project_app.elf
-nios2-elf-g++  -T'../ECE_178_Project_app_bsp//linker.x' -msys-crt0='../ECE_178_Project_app_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../ECE_178_Project_app_bsp/   -Wl,-Map=ECE_178_Project_app.map   -O0 -g -Wall   -mhw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o ECE_178_Project_app.elf obj/default/main.o obj/default/piezo.o -lm -msys-lib=m
-nios2-elf-insert ECE_178_Project_app.elf --thread_model hal --cpu_name nios2_qsys --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "D:/intelFPGA_lite/17.1/projects/ECE_178_Project" --jdi ../..//output_files/ECE_178_Project_nios.jdi --sopcinfo D:/intelFPGA_lite/17.1/projects/ECE_178_Project/software/ECE_178_Project_app_bsp/../../nios_system.sopcinfo
-Info: (ECE_178_Project_app.elf) 60 KBytes program size (code + initialized data).
-Info:                           131004 KBytes free for stack + heap.
-Info: Creating ECE_178_Project_app.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source ECE_178_Project_app.elf >ECE_178_Project_app.objdump
-[ECE_178_Project_app build complete]
-11:24:07 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
-make all 
-Info: Building ../ECE_178_Project_app_bsp/
-D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
-[BSP build complete]
-[ECE_178_Project_app build complete]
-11:24:48 **** Build of configuration Nios II for project ECE_178_Project_app ****
-make all 
-Info: Building ../ECE_178_Project_app_bsp/
-D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
-[BSP build complete]
-[ECE_178_Project_app build complete]
-11:24:51 **** Incremental Build of configuration Nios II for project ECE_178_Project_app ****
-make all 
-Info: Building ../ECE_178_Project_app_bsp/
-D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ECE_178_Project_app_bsp/
-[BSP build complete]
-[ECE_178_Project_app build complete]
+obj/default/main.o: In function `timer_2_int_init':
+D:\intelFPGA_lite\17.1\projects\ECE_178_Project\software\ECE_178_Project_app/main.c:124: undefined reference to `alt_ic_isr_register'
+obj/default/main.o: In function `timer_3_init':
+D:\intelFPGA_lite\17.1\projects\ECE_178_Project\software\ECE_178_Project_app/main.c:175: undefined reference to `alt_ic_isr_register'
+obj/default/piezo.o: In function `timer_0_int_init':
+D:\intelFPGA_lite\17.1\projects\ECE_178_Project\software\ECE_178_Project_app/piezo.c:8: undefined reference to `alt_ic_isr_register'
+obj/default/piezo.o: In function `timer_1_int_init':
+D:\intelFPGA_lite\17.1\projects\ECE_178_Project\software\ECE_178_Project_app/piezo.c:53: undefined reference to `alt_ic_isr_register'
+collect2.exe: error: ld returned 1 exit status
+make: *** [ECE_178_Project_app.elf] Error 1

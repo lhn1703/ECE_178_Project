@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Mon Apr 25 11:28:22 PDT 2022
+ * Generated: Mon May 02 13:01:42 PDT 2022
  */
 
 /*
@@ -62,7 +62,7 @@
 #include "Altera_UP_SD_Card_Avalon_Interface.h"
 #include "altera_avalon_jtag_uart.h"
 #include "altera_avalon_timer.h"
-#include "altera_avalon_uart.h"
+#include "altera_up_avalon_rs232.h"
 #include "altera_up_avalon_video_pixel_buffer_dma.h"
 #include "altera_up_avalon_video_rgb_resampler.h"
 
@@ -78,7 +78,7 @@ ALTERA_AVALON_TIMER_INSTANCE ( TIMER_2, timer_2);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMER_3, timer_3);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMER_4, timer_4);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMER_5, timer_5);
-ALTERA_AVALON_UART_INSTANCE ( RS_232, rs_232);
+ALTERA_UP_AVALON_RS232_INSTANCE ( RS232, rs232);
 ALTERA_UP_AVALON_VIDEO_PIXEL_BUFFER_DMA_INSTANCE ( PIXEL_BUFFER_DMA, pixel_buffer_dma);
 ALTERA_UP_AVALON_VIDEO_RGB_RESAMPLER_INSTANCE ( PIXEL_RGB_RESAMPLER, pixel_rgb_resampler);
 ALTERA_UP_SD_CARD_AVALON_INTERFACE_INSTANCE ( SD_CARD, sd_card);
@@ -111,7 +111,7 @@ void alt_sys_init( void )
     ALTERA_AVALON_TIMER_INIT ( TIMER_4, timer_4);
     ALTERA_AVALON_TIMER_INIT ( TIMER_5, timer_5);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
-    ALTERA_AVALON_UART_INIT ( RS_232, rs_232);
+    ALTERA_UP_AVALON_RS232_INIT ( RS232, rs232);
     ALTERA_UP_AVALON_VIDEO_PIXEL_BUFFER_DMA_INIT ( PIXEL_BUFFER_DMA, pixel_buffer_dma);
     ALTERA_UP_AVALON_VIDEO_RGB_RESAMPLER_INIT ( PIXEL_RGB_RESAMPLER, pixel_rgb_resampler);
     ALTERA_UP_SD_CARD_AVALON_INTERFACE_INIT ( SD_CARD, sd_card);

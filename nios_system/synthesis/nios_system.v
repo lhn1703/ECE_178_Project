@@ -13,8 +13,8 @@ module nios_system (
 		output wire [17:0] ledr_export,                 //                  ledr.export
 		output wire        piezo_pwm_export,            //             piezo_pwm.export
 		input  wire        reset_reset,                 //                 reset.reset
-		input  wire        rs_232_rxd,                  //                rs_232.rxd
-		output wire        rs_232_txd,                  //                      .txd
+		input  wire        rs232_RXD,                   //                 rs232.RXD
+		output wire        rs232_TXD,                   //                      .TXD
 		inout  wire        sd_card_b_SD_cmd,            //               sd_card.b_SD_cmd
 		inout  wire        sd_card_b_SD_dat,            //                      .b_SD_dat
 		inout  wire        sd_card_b_SD_dat3,           //                      .b_SD_dat3
@@ -62,7 +62,7 @@ module nios_system (
 	wire         pixel_rgb_resampler_avalon_rgb_source_ready;                        // pixel_scaler:stream_in_ready -> pixel_rgb_resampler:stream_out_ready
 	wire         pixel_rgb_resampler_avalon_rgb_source_startofpacket;                // pixel_rgb_resampler:stream_out_startofpacket -> pixel_scaler:stream_in_startofpacket
 	wire         pixel_rgb_resampler_avalon_rgb_source_endofpacket;                  // pixel_rgb_resampler:stream_out_endofpacket -> pixel_scaler:stream_in_endofpacket
-	wire         clocks_sys_clk_clk;                                                 // clocks:sys_clk_clk -> [avalon_st_adapter:in_clk_0_clk, dual_clock_fifo:clk_stream_in, hex_displays:clk, irq_mapper:clk, joystick_stick_1:clk, joystick_stick_2:clk, jtag_uart:clk, keys:clk, ledg:clk, ledr:clk, mm_interconnect_0:clocks_sys_clk_clk, nios2_qsys:clk, piezo_pwm:clk, pixel_buffer:clk, pixel_buffer_dma:clk, pixel_rgb_resampler:clk, pixel_scaler:clk, rs_232:clk, rst_controller:clk, sd_card:i_clock, sdram_controller:clk, switches:clk, timer_0:clk, timer_1:clk, timer_2:clk, timer_3:clk, timer_4:clk, timer_5:clk, video_pll:ref_clk_clk]
+	wire         clocks_sys_clk_clk;                                                 // clocks:sys_clk_clk -> [avalon_st_adapter:in_clk_0_clk, dual_clock_fifo:clk_stream_in, hex_displays:clk, irq_mapper:clk, joystick_stick_1:clk, joystick_stick_2:clk, jtag_uart:clk, keys:clk, ledg:clk, ledr:clk, mm_interconnect_0:clocks_sys_clk_clk, nios2_qsys:clk, piezo_pwm:clk, pixel_buffer:clk, pixel_buffer_dma:clk, pixel_rgb_resampler:clk, pixel_scaler:clk, rs232:clk, rst_controller:clk, sd_card:i_clock, sdram_controller:clk, switches:clk, timer_0:clk, timer_1:clk, timer_2:clk, timer_3:clk, timer_4:clk, timer_5:clk, video_pll:ref_clk_clk]
 	wire         video_pll_vga_clk_clk;                                              // video_pll:vga_clk_clk -> [dual_clock_fifo:clk_stream_out, rst_controller_001:clk, video_vga_controller:clk]
 	wire         pixel_buffer_dma_avalon_pixel_dma_master_waitrequest;               // mm_interconnect_0:pixel_buffer_dma_avalon_pixel_dma_master_waitrequest -> pixel_buffer_dma:master_waitrequest
 	wire  [15:0] pixel_buffer_dma_avalon_pixel_dma_master_readdata;                  // mm_interconnect_0:pixel_buffer_dma_avalon_pixel_dma_master_readdata -> pixel_buffer_dma:master_readdata
@@ -123,6 +123,13 @@ module nios_system (
 	wire  [31:0] mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata;            // mm_interconnect_0:jtag_uart_avalon_jtag_slave_writedata -> jtag_uart:av_writedata
 	wire  [31:0] mm_interconnect_0_pixel_rgb_resampler_avalon_rgb_slave_readdata;    // pixel_rgb_resampler:slave_readdata -> mm_interconnect_0:pixel_rgb_resampler_avalon_rgb_slave_readdata
 	wire         mm_interconnect_0_pixel_rgb_resampler_avalon_rgb_slave_read;        // mm_interconnect_0:pixel_rgb_resampler_avalon_rgb_slave_read -> pixel_rgb_resampler:slave_read
+	wire         mm_interconnect_0_rs232_avalon_rs232_slave_chipselect;              // mm_interconnect_0:rs232_avalon_rs232_slave_chipselect -> rs232:chipselect
+	wire  [31:0] mm_interconnect_0_rs232_avalon_rs232_slave_readdata;                // rs232:readdata -> mm_interconnect_0:rs232_avalon_rs232_slave_readdata
+	wire   [0:0] mm_interconnect_0_rs232_avalon_rs232_slave_address;                 // mm_interconnect_0:rs232_avalon_rs232_slave_address -> rs232:address
+	wire         mm_interconnect_0_rs232_avalon_rs232_slave_read;                    // mm_interconnect_0:rs232_avalon_rs232_slave_read -> rs232:read
+	wire   [3:0] mm_interconnect_0_rs232_avalon_rs232_slave_byteenable;              // mm_interconnect_0:rs232_avalon_rs232_slave_byteenable -> rs232:byteenable
+	wire         mm_interconnect_0_rs232_avalon_rs232_slave_write;                   // mm_interconnect_0:rs232_avalon_rs232_slave_write -> rs232:write
+	wire  [31:0] mm_interconnect_0_rs232_avalon_rs232_slave_writedata;               // mm_interconnect_0:rs232_avalon_rs232_slave_writedata -> rs232:writedata
 	wire         mm_interconnect_0_sd_card_avalon_sdcard_slave_chipselect;           // mm_interconnect_0:sd_card_avalon_sdcard_slave_chipselect -> sd_card:i_avalon_chip_select
 	wire  [31:0] mm_interconnect_0_sd_card_avalon_sdcard_slave_readdata;             // sd_card:o_avalon_readdata -> mm_interconnect_0:sd_card_avalon_sdcard_slave_readdata
 	wire         mm_interconnect_0_sd_card_avalon_sdcard_slave_waitrequest;          // sd_card:o_avalon_waitrequest -> mm_interconnect_0:sd_card_avalon_sdcard_slave_waitrequest
@@ -175,13 +182,6 @@ module nios_system (
 	wire   [1:0] mm_interconnect_0_joystick_stick_1_s1_address;                      // mm_interconnect_0:joystick_stick_1_s1_address -> joystick_stick_1:address
 	wire  [31:0] mm_interconnect_0_joystick_stick_2_s1_readdata;                     // joystick_stick_2:readdata -> mm_interconnect_0:joystick_stick_2_s1_readdata
 	wire   [1:0] mm_interconnect_0_joystick_stick_2_s1_address;                      // mm_interconnect_0:joystick_stick_2_s1_address -> joystick_stick_2:address
-	wire         mm_interconnect_0_rs_232_s1_chipselect;                             // mm_interconnect_0:rs_232_s1_chipselect -> rs_232:chipselect
-	wire  [15:0] mm_interconnect_0_rs_232_s1_readdata;                               // rs_232:readdata -> mm_interconnect_0:rs_232_s1_readdata
-	wire   [2:0] mm_interconnect_0_rs_232_s1_address;                                // mm_interconnect_0:rs_232_s1_address -> rs_232:address
-	wire         mm_interconnect_0_rs_232_s1_read;                                   // mm_interconnect_0:rs_232_s1_read -> rs_232:read_n
-	wire         mm_interconnect_0_rs_232_s1_begintransfer;                          // mm_interconnect_0:rs_232_s1_begintransfer -> rs_232:begintransfer
-	wire         mm_interconnect_0_rs_232_s1_write;                                  // mm_interconnect_0:rs_232_s1_write -> rs_232:write_n
-	wire  [15:0] mm_interconnect_0_rs_232_s1_writedata;                              // mm_interconnect_0:rs_232_s1_writedata -> rs_232:writedata
 	wire         mm_interconnect_0_timer_3_s1_chipselect;                            // mm_interconnect_0:timer_3_s1_chipselect -> timer_3:chipselect
 	wire  [15:0] mm_interconnect_0_timer_3_s1_readdata;                              // timer_3:readdata -> mm_interconnect_0:timer_3_s1_readdata
 	wire   [2:0] mm_interconnect_0_timer_3_s1_address;                               // mm_interconnect_0:timer_3_s1_address -> timer_3:address
@@ -202,13 +202,13 @@ module nios_system (
 	wire   [1:0] mm_interconnect_0_piezo_pwm_s1_address;                             // mm_interconnect_0:piezo_pwm_s1_address -> piezo_pwm:address
 	wire         mm_interconnect_0_piezo_pwm_s1_write;                               // mm_interconnect_0:piezo_pwm_s1_write -> piezo_pwm:write_n
 	wire  [31:0] mm_interconnect_0_piezo_pwm_s1_writedata;                           // mm_interconnect_0:piezo_pwm_s1_writedata -> piezo_pwm:writedata
-	wire         irq_mapper_receiver0_irq;                                           // timer_2:irq -> irq_mapper:receiver0_irq
-	wire         irq_mapper_receiver1_irq;                                           // timer_1:irq -> irq_mapper:receiver1_irq
-	wire         irq_mapper_receiver2_irq;                                           // timer_0:irq -> irq_mapper:receiver2_irq
-	wire         irq_mapper_receiver3_irq;                                           // switches:irq -> irq_mapper:receiver3_irq
-	wire         irq_mapper_receiver4_irq;                                           // keys:irq -> irq_mapper:receiver4_irq
-	wire         irq_mapper_receiver5_irq;                                           // jtag_uart:av_irq -> irq_mapper:receiver5_irq
-	wire         irq_mapper_receiver6_irq;                                           // rs_232:irq -> irq_mapper:receiver6_irq
+	wire         irq_mapper_receiver0_irq;                                           // rs232:irq -> irq_mapper:receiver0_irq
+	wire         irq_mapper_receiver1_irq;                                           // timer_2:irq -> irq_mapper:receiver1_irq
+	wire         irq_mapper_receiver2_irq;                                           // timer_1:irq -> irq_mapper:receiver2_irq
+	wire         irq_mapper_receiver3_irq;                                           // timer_0:irq -> irq_mapper:receiver3_irq
+	wire         irq_mapper_receiver4_irq;                                           // switches:irq -> irq_mapper:receiver4_irq
+	wire         irq_mapper_receiver5_irq;                                           // keys:irq -> irq_mapper:receiver5_irq
+	wire         irq_mapper_receiver6_irq;                                           // jtag_uart:av_irq -> irq_mapper:receiver6_irq
 	wire         irq_mapper_receiver7_irq;                                           // timer_3:irq -> irq_mapper:receiver7_irq
 	wire         irq_mapper_receiver8_irq;                                           // timer_4:irq -> irq_mapper:receiver8_irq
 	wire         irq_mapper_receiver9_irq;                                           // timer_5:irq -> irq_mapper:receiver9_irq
@@ -224,7 +224,7 @@ module nios_system (
 	wire         avalon_st_adapter_out_0_ready;                                      // dual_clock_fifo:stream_in_ready -> avalon_st_adapter:out_0_ready
 	wire         avalon_st_adapter_out_0_startofpacket;                              // avalon_st_adapter:out_0_startofpacket -> dual_clock_fifo:stream_in_startofpacket
 	wire         avalon_st_adapter_out_0_endofpacket;                                // avalon_st_adapter:out_0_endofpacket -> dual_clock_fifo:stream_in_endofpacket
-	wire         rst_controller_reset_out_reset;                                     // rst_controller:reset_out -> [avalon_st_adapter:in_rst_0_reset, dual_clock_fifo:reset_stream_in, hex_displays:reset_n, irq_mapper:reset, joystick_stick_1:reset_n, joystick_stick_2:reset_n, jtag_uart:rst_n, keys:reset_n, ledg:reset_n, ledr:reset_n, mm_interconnect_0:pixel_buffer_dma_reset_reset_bridge_in_reset_reset, nios2_qsys:reset_n, piezo_pwm:reset_n, pixel_buffer:reset, pixel_buffer_dma:reset, pixel_rgb_resampler:reset, pixel_scaler:reset, rs_232:reset_n, rst_translator:in_reset, sd_card:i_reset_n, sdram_controller:reset_n, switches:reset_n, timer_0:reset_n, timer_1:reset_n, timer_2:reset_n, timer_3:reset_n, timer_4:reset_n, timer_5:reset_n, video_pll:ref_reset_reset]
+	wire         rst_controller_reset_out_reset;                                     // rst_controller:reset_out -> [avalon_st_adapter:in_rst_0_reset, dual_clock_fifo:reset_stream_in, hex_displays:reset_n, irq_mapper:reset, joystick_stick_1:reset_n, joystick_stick_2:reset_n, jtag_uart:rst_n, keys:reset_n, ledg:reset_n, ledr:reset_n, mm_interconnect_0:pixel_buffer_dma_reset_reset_bridge_in_reset_reset, nios2_qsys:reset_n, piezo_pwm:reset_n, pixel_buffer:reset, pixel_buffer_dma:reset, pixel_rgb_resampler:reset, pixel_scaler:reset, rs232:reset, rst_translator:in_reset, sd_card:i_reset_n, sdram_controller:reset_n, switches:reset_n, timer_0:reset_n, timer_1:reset_n, timer_2:reset_n, timer_3:reset_n, timer_4:reset_n, timer_5:reset_n, video_pll:ref_reset_reset]
 	wire         rst_controller_reset_out_reset_req;                                 // rst_controller:reset_req -> [nios2_qsys:reset_req, rst_translator:reset_req_in]
 	wire         nios2_qsys_jtag_debug_module_reset_reset;                           // nios2_qsys:jtag_debug_module_resetrequest -> [rst_controller:reset_in0, rst_controller_001:reset_in0]
 	wire         clocks_reset_source_reset;                                          // clocks:reset_source_reset -> rst_controller:reset_in1
@@ -293,7 +293,7 @@ module nios_system (
 		.av_write_n     (~mm_interconnect_0_jtag_uart_avalon_jtag_slave_write),      //                  .write_n
 		.av_writedata   (mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata),   //                  .writedata
 		.av_waitrequest (mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest), //                  .waitrequest
-		.av_irq         (irq_mapper_receiver5_irq)                                   //               irq.irq
+		.av_irq         (irq_mapper_receiver6_irq)                                   //               irq.irq
 	);
 
 	nios_system_keys keys (
@@ -305,7 +305,7 @@ module nios_system (
 		.chipselect (mm_interconnect_0_keys_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_0_keys_s1_readdata),   //                    .readdata
 		.in_port    (keys_export),                          // external_connection.export
-		.irq        (irq_mapper_receiver4_irq)              //                 irq.irq
+		.irq        (irq_mapper_receiver5_irq)              //                 irq.irq
 	);
 
 	nios_system_ledg ledg (
@@ -446,19 +446,19 @@ module nios_system (
 		.stream_out_channel       (pixel_scaler_avalon_scaler_source_channel)            //                     .channel
 	);
 
-	nios_system_rs_232 rs_232 (
-		.clk           (clocks_sys_clk_clk),                        //                 clk.clk
-		.reset_n       (~rst_controller_reset_out_reset),           //               reset.reset_n
-		.address       (mm_interconnect_0_rs_232_s1_address),       //                  s1.address
-		.begintransfer (mm_interconnect_0_rs_232_s1_begintransfer), //                    .begintransfer
-		.chipselect    (mm_interconnect_0_rs_232_s1_chipselect),    //                    .chipselect
-		.read_n        (~mm_interconnect_0_rs_232_s1_read),         //                    .read_n
-		.write_n       (~mm_interconnect_0_rs_232_s1_write),        //                    .write_n
-		.writedata     (mm_interconnect_0_rs_232_s1_writedata),     //                    .writedata
-		.readdata      (mm_interconnect_0_rs_232_s1_readdata),      //                    .readdata
-		.rxd           (rs_232_rxd),                                // external_connection.export
-		.txd           (rs_232_txd),                                //                    .export
-		.irq           (irq_mapper_receiver6_irq)                   //                 irq.irq
+	nios_system_rs232 rs232 (
+		.clk        (clocks_sys_clk_clk),                                    //                clk.clk
+		.reset      (rst_controller_reset_out_reset),                        //              reset.reset
+		.address    (mm_interconnect_0_rs232_avalon_rs232_slave_address),    // avalon_rs232_slave.address
+		.chipselect (mm_interconnect_0_rs232_avalon_rs232_slave_chipselect), //                   .chipselect
+		.byteenable (mm_interconnect_0_rs232_avalon_rs232_slave_byteenable), //                   .byteenable
+		.read       (mm_interconnect_0_rs232_avalon_rs232_slave_read),       //                   .read
+		.write      (mm_interconnect_0_rs232_avalon_rs232_slave_write),      //                   .write
+		.writedata  (mm_interconnect_0_rs232_avalon_rs232_slave_writedata),  //                   .writedata
+		.readdata   (mm_interconnect_0_rs232_avalon_rs232_slave_readdata),   //                   .readdata
+		.irq        (irq_mapper_receiver0_irq),                              //          interrupt.irq
+		.UART_RXD   (rs232_RXD),                                             // external_interface.export
+		.UART_TXD   (rs232_TXD)                                              //                   .export
 	);
 
 	Altera_UP_SD_Card_Avalon_Interface sd_card (
@@ -510,7 +510,7 @@ module nios_system (
 		.chipselect (mm_interconnect_0_switches_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_0_switches_s1_readdata),   //                    .readdata
 		.in_port    (switches_export),                          // external_connection.export
-		.irq        (irq_mapper_receiver3_irq)                  //                 irq.irq
+		.irq        (irq_mapper_receiver4_irq)                  //                 irq.irq
 	);
 
 	nios_system_timer_0 timer_0 (
@@ -521,7 +521,7 @@ module nios_system (
 		.readdata   (mm_interconnect_0_timer_0_s1_readdata),   //      .readdata
 		.chipselect (mm_interconnect_0_timer_0_s1_chipselect), //      .chipselect
 		.write_n    (~mm_interconnect_0_timer_0_s1_write),     //      .write_n
-		.irq        (irq_mapper_receiver2_irq)                 //   irq.irq
+		.irq        (irq_mapper_receiver3_irq)                 //   irq.irq
 	);
 
 	nios_system_timer_0 timer_1 (
@@ -532,7 +532,7 @@ module nios_system (
 		.readdata   (mm_interconnect_0_timer_1_s1_readdata),   //      .readdata
 		.chipselect (mm_interconnect_0_timer_1_s1_chipselect), //      .chipselect
 		.write_n    (~mm_interconnect_0_timer_1_s1_write),     //      .write_n
-		.irq        (irq_mapper_receiver1_irq)                 //   irq.irq
+		.irq        (irq_mapper_receiver2_irq)                 //   irq.irq
 	);
 
 	nios_system_timer_0 timer_2 (
@@ -543,7 +543,7 @@ module nios_system (
 		.readdata   (mm_interconnect_0_timer_2_s1_readdata),   //      .readdata
 		.chipselect (mm_interconnect_0_timer_2_s1_chipselect), //      .chipselect
 		.write_n    (~mm_interconnect_0_timer_2_s1_write),     //      .write_n
-		.irq        (irq_mapper_receiver0_irq)                 //   irq.irq
+		.irq        (irq_mapper_receiver1_irq)                 //   irq.irq
 	);
 
 	nios_system_timer_0 timer_3 (
@@ -686,13 +686,13 @@ module nios_system (
 		.pixel_buffer_dma_avalon_control_slave_byteenable       (mm_interconnect_0_pixel_buffer_dma_avalon_control_slave_byteenable), //                                             .byteenable
 		.pixel_rgb_resampler_avalon_rgb_slave_read              (mm_interconnect_0_pixel_rgb_resampler_avalon_rgb_slave_read),        //         pixel_rgb_resampler_avalon_rgb_slave.read
 		.pixel_rgb_resampler_avalon_rgb_slave_readdata          (mm_interconnect_0_pixel_rgb_resampler_avalon_rgb_slave_readdata),    //                                             .readdata
-		.rs_232_s1_address                                      (mm_interconnect_0_rs_232_s1_address),                                //                                    rs_232_s1.address
-		.rs_232_s1_write                                        (mm_interconnect_0_rs_232_s1_write),                                  //                                             .write
-		.rs_232_s1_read                                         (mm_interconnect_0_rs_232_s1_read),                                   //                                             .read
-		.rs_232_s1_readdata                                     (mm_interconnect_0_rs_232_s1_readdata),                               //                                             .readdata
-		.rs_232_s1_writedata                                    (mm_interconnect_0_rs_232_s1_writedata),                              //                                             .writedata
-		.rs_232_s1_begintransfer                                (mm_interconnect_0_rs_232_s1_begintransfer),                          //                                             .begintransfer
-		.rs_232_s1_chipselect                                   (mm_interconnect_0_rs_232_s1_chipselect),                             //                                             .chipselect
+		.rs232_avalon_rs232_slave_address                       (mm_interconnect_0_rs232_avalon_rs232_slave_address),                 //                     rs232_avalon_rs232_slave.address
+		.rs232_avalon_rs232_slave_write                         (mm_interconnect_0_rs232_avalon_rs232_slave_write),                   //                                             .write
+		.rs232_avalon_rs232_slave_read                          (mm_interconnect_0_rs232_avalon_rs232_slave_read),                    //                                             .read
+		.rs232_avalon_rs232_slave_readdata                      (mm_interconnect_0_rs232_avalon_rs232_slave_readdata),                //                                             .readdata
+		.rs232_avalon_rs232_slave_writedata                     (mm_interconnect_0_rs232_avalon_rs232_slave_writedata),               //                                             .writedata
+		.rs232_avalon_rs232_slave_byteenable                    (mm_interconnect_0_rs232_avalon_rs232_slave_byteenable),              //                                             .byteenable
+		.rs232_avalon_rs232_slave_chipselect                    (mm_interconnect_0_rs232_avalon_rs232_slave_chipselect),              //                                             .chipselect
 		.sd_card_avalon_sdcard_slave_address                    (mm_interconnect_0_sd_card_avalon_sdcard_slave_address),              //                  sd_card_avalon_sdcard_slave.address
 		.sd_card_avalon_sdcard_slave_write                      (mm_interconnect_0_sd_card_avalon_sdcard_slave_write),                //                                             .write
 		.sd_card_avalon_sdcard_slave_read                       (mm_interconnect_0_sd_card_avalon_sdcard_slave_read),                 //                                             .read

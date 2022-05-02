@@ -6,9 +6,8 @@
 		.keys_export                 (<connected-to-keys_export>),                 //                  keys.export
 		.ledg_export                 (<connected-to-ledg_export>),                 //                  ledg.export
 		.ledr_export                 (<connected-to-ledr_export>),                 //                  ledr.export
+		.piezo_pwm_export            (<connected-to-piezo_pwm_export>),            //             piezo_pwm.export
 		.reset_reset                 (<connected-to-reset_reset>),                 //                 reset.reset
-		.rs_232_rxd                  (<connected-to-rs_232_rxd>),                  //                rs_232.rxd
-		.rs_232_txd                  (<connected-to-rs_232_txd>),                  //                      .txd
 		.sd_card_b_SD_cmd            (<connected-to-sd_card_b_SD_cmd>),            //               sd_card.b_SD_cmd
 		.sd_card_b_SD_dat            (<connected-to-sd_card_b_SD_dat>),            //                      .b_SD_dat
 		.sd_card_b_SD_dat3           (<connected-to-sd_card_b_SD_dat3>),           //                      .b_SD_dat3
@@ -39,6 +38,7 @@
 		.video_vga_controller_R      (<connected-to-video_vga_controller_R>),      //                      .R
 		.video_vga_controller_G      (<connected-to-video_vga_controller_G>),      //                      .G
 		.video_vga_controller_B      (<connected-to-video_vga_controller_B>),      //                      .B
-		.piezo_pwm_export            (<connected-to-piezo_pwm_export>)             //             piezo_pwm.export
+		.rs232_RXD                   (<connected-to-rs232_RXD>),                   //                 rs232.RXD
+		.rs232_TXD                   (<connected-to-rs232_TXD>)                    //                      .TXD
 	);
 

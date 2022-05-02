@@ -61,8 +61,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 432)
 		(input)
-		(text "rs_232_rxd" (rect 0 0 47 12)(font "Arial" (font_size 8)))
-		(text "rs_232_rxd" (rect 4 421 64 432)(font "Arial" (font_size 8)))
+		(text "rs232_RXD" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "rs232_RXD" (rect 4 421 58 432)(font "Arial" (font_size 8)))
 		(line (pt 0 432)(pt 176 432)(line_width 1))
 	)
 	(port
@@ -103,8 +103,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 448)
 		(output)
-		(text "rs_232_txd" (rect 0 0 46 12)(font "Arial" (font_size 8)))
-		(text "rs_232_txd" (rect 4 437 64 448)(font "Arial" (font_size 8)))
+		(text "rs232_TXD" (rect 0 0 47 12)(font "Arial" (font_size 8)))
+		(text "rs232_TXD" (rect 4 437 58 448)(font "Arial" (font_size 8)))
 		(line (pt 0 448)(pt 176 448)(line_width 1))
 	)
 	(port
@@ -329,9 +329,9 @@ refer to the applicable agreement for further details.
 		(text "export" (rect 181 347 398 704)(font "Arial" (color 0 0 0)))
 		(text "reset" (rect 147 363 324 739)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "reset" (rect 181 387 392 784)(font "Arial" (color 0 0 0)))
-		(text "rs_232" (rect 136 403 308 819)(font "Arial" (color 128 0 0)(font_size 9)))
-		(text "rxd" (rect 181 427 380 864)(font "Arial" (color 0 0 0)))
-		(text "txd" (rect 181 443 380 896)(font "Arial" (color 0 0 0)))
+		(text "rs232" (rect 144 403 318 819)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "RXD" (rect 181 427 380 864)(font "Arial" (color 0 0 0)))
+		(text "TXD" (rect 181 443 380 896)(font "Arial" (color 0 0 0)))
 		(text "sd_card" (rect 130 459 302 931)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "b_SD_cmd" (rect 181 483 410 976)(font "Arial" (color 0 0 0)))
 		(text "b_SD_dat" (rect 181 499 410 1008)(font "Arial" (color 0 0 0)))

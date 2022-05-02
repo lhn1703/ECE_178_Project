@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Mon Apr 25 11:28:22 PDT 2022
+ * Generated: Mon May 02 13:01:42 PDT 2022
  */
 
 /*
@@ -131,8 +131,8 @@
 #define __ALTERA_AVALON_NEW_SDRAM_CONTROLLER
 #define __ALTERA_AVALON_PIO
 #define __ALTERA_AVALON_TIMER
-#define __ALTERA_AVALON_UART
 #define __ALTERA_NIOS2_QSYS
+#define __ALTERA_UP_AVALON_RS232
 #define __ALTERA_UP_AVALON_SRAM
 #define __ALTERA_UP_AVALON_VIDEO_PIXEL_BUFFER_DMA
 #define __ALTERA_UP_AVALON_VIDEO_RGB_RESAMPLER
@@ -145,8 +145,8 @@
  */
 
 #define ALT_DEVICE_FAMILY "Cyclone IV E"
-#define ALT_ENHANCED_INTERRUPT_API_PRESENT
 #define ALT_IRQ_BASE NULL
+#define ALT_LEGACY_INTERRUPT_API_PRESENT
 #define ALT_LOG_PORT "/dev/null"
 #define ALT_LOG_PORT_BASE 0x0
 #define ALT_LOG_PORT_DEV null
@@ -155,19 +155,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_BASE 0x8201570
+#define ALT_STDERR_BASE 0x8201558
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x8201570
+#define ALT_STDIN_BASE 0x8201558
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_BASE 0x8201570
+#define ALT_STDOUT_BASE 0x8201558
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -191,7 +191,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_displays altera_avalon_pio
-#define HEX_DISPLAYS_BASE 0x8201530
+#define HEX_DISPLAYS_BASE 0x8201510
 #define HEX_DISPLAYS_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_DISPLAYS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_DISPLAYS_CAPTURE 0
@@ -218,7 +218,7 @@
  */
 
 #define ALT_MODULE_CLASS_joystick_stick_1 altera_avalon_pio
-#define JOYSTICK_STICK_1_BASE 0x8201500
+#define JOYSTICK_STICK_1_BASE 0x82014e0
 #define JOYSTICK_STICK_1_BIT_CLEARING_EDGE_REGISTER 0
 #define JOYSTICK_STICK_1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define JOYSTICK_STICK_1_CAPTURE 0
@@ -245,7 +245,7 @@
  */
 
 #define ALT_MODULE_CLASS_joystick_stick_2 altera_avalon_pio
-#define JOYSTICK_STICK_2_BASE 0x82014f0
+#define JOYSTICK_STICK_2_BASE 0x82014d0
 #define JOYSTICK_STICK_2_BIT_CLEARING_EDGE_REGISTER 0
 #define JOYSTICK_STICK_2_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define JOYSTICK_STICK_2_CAPTURE 0
@@ -272,7 +272,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
-#define JTAG_UART_BASE 0x8201570
+#define JTAG_UART_BASE 0x8201558
 #define JTAG_UART_IRQ 0
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
@@ -290,7 +290,7 @@
  */
 
 #define ALT_MODULE_CLASS_keys altera_avalon_pio
-#define KEYS_BASE 0x8201520
+#define KEYS_BASE 0x8201500
 #define KEYS_BIT_CLEARING_EDGE_REGISTER 0
 #define KEYS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define KEYS_CAPTURE 1
@@ -317,7 +317,7 @@
  */
 
 #define ALT_MODULE_CLASS_ledg altera_avalon_pio
-#define LEDG_BASE 0x8201540
+#define LEDG_BASE 0x8201520
 #define LEDG_BIT_CLEARING_EDGE_REGISTER 0
 #define LEDG_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LEDG_CAPTURE 0
@@ -344,7 +344,7 @@
  */
 
 #define ALT_MODULE_CLASS_ledr altera_avalon_pio
-#define LEDR_BASE 0x8201550
+#define LEDR_BASE 0x8201530
 #define LEDR_BIT_CLEARING_EDGE_REGISTER 0
 #define LEDR_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LEDR_CAPTURE 0
@@ -371,7 +371,7 @@
  */
 
 #define ALT_MODULE_CLASS_piezo_pwm altera_avalon_pio
-#define PIEZO_PWM_BASE 0x82014e0
+#define PIEZO_PWM_BASE 0x82014c0
 #define PIEZO_PWM_BIT_CLEARING_EDGE_REGISTER 0
 #define PIEZO_PWM_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIEZO_PWM_CAPTURE 0
@@ -412,7 +412,7 @@
  */
 
 #define ALT_MODULE_CLASS_pixel_buffer_dma altera_up_avalon_video_pixel_buffer_dma
-#define PIXEL_BUFFER_DMA_BASE 0x8201560
+#define PIXEL_BUFFER_DMA_BASE 0x8201540
 #define PIXEL_BUFFER_DMA_IRQ -1
 #define PIXEL_BUFFER_DMA_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define PIXEL_BUFFER_DMA_NAME "/dev/pixel_buffer_dma"
@@ -426,7 +426,7 @@
  */
 
 #define ALT_MODULE_CLASS_pixel_rgb_resampler altera_up_avalon_video_rgb_resampler
-#define PIXEL_RGB_RESAMPLER_BASE 0x8201578
+#define PIXEL_RGB_RESAMPLER_BASE 0x8201560
 #define PIXEL_RGB_RESAMPLER_IRQ -1
 #define PIXEL_RGB_RESAMPLER_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define PIXEL_RGB_RESAMPLER_NAME "/dev/pixel_rgb_resampler"
@@ -435,28 +435,17 @@
 
 
 /*
- * rs_232 configuration
+ * rs232 configuration
  *
  */
 
-#define ALT_MODULE_CLASS_rs_232 altera_avalon_uart
-#define RS_232_BASE 0x8201460
-#define RS_232_BAUD 9600
-#define RS_232_DATA_BITS 8
-#define RS_232_FIXED_BAUD 1
-#define RS_232_FREQ 50000000
-#define RS_232_IRQ 9
-#define RS_232_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define RS_232_NAME "/dev/rs_232"
-#define RS_232_PARITY 'N'
-#define RS_232_SIM_CHAR_STREAM ""
-#define RS_232_SIM_TRUE_BAUD 0
-#define RS_232_SPAN 32
-#define RS_232_STOP_BITS 1
-#define RS_232_SYNC_REG_DEPTH 2
-#define RS_232_TYPE "altera_avalon_uart"
-#define RS_232_USE_CTS_RTS 0
-#define RS_232_USE_EOP_REGISTER 0
+#define ALT_MODULE_CLASS_rs232 altera_up_avalon_rs232
+#define RS232_BASE 0x8201550
+#define RS232_IRQ 9
+#define RS232_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define RS232_NAME "/dev/rs232"
+#define RS232_SPAN 8
+#define RS232_TYPE "altera_up_avalon_rs232"
 
 
 /*
@@ -518,7 +507,7 @@
  */
 
 #define ALT_MODULE_CLASS_switches altera_avalon_pio
-#define SWITCHES_BASE 0x8201510
+#define SWITCHES_BASE 0x82014f0
 #define SWITCHES_BIT_CLEARING_EDGE_REGISTER 0
 #define SWITCHES_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SWITCHES_CAPTURE 1
@@ -546,7 +535,7 @@
 
 #define ALT_MODULE_CLASS_timer_0 altera_avalon_timer
 #define TIMER_0_ALWAYS_RUN 0
-#define TIMER_0_BASE 0x82014c0
+#define TIMER_0_BASE 0x82014a0
 #define TIMER_0_COUNTER_SIZE 32
 #define TIMER_0_FIXED_PERIOD 0
 #define TIMER_0_FREQ 50000000
@@ -572,7 +561,7 @@
 
 #define ALT_MODULE_CLASS_timer_1 altera_avalon_timer
 #define TIMER_1_ALWAYS_RUN 0
-#define TIMER_1_BASE 0x82014a0
+#define TIMER_1_BASE 0x8201480
 #define TIMER_1_COUNTER_SIZE 32
 #define TIMER_1_FIXED_PERIOD 0
 #define TIMER_1_FREQ 50000000
@@ -598,7 +587,7 @@
 
 #define ALT_MODULE_CLASS_timer_2 altera_avalon_timer
 #define TIMER_2_ALWAYS_RUN 0
-#define TIMER_2_BASE 0x8201480
+#define TIMER_2_BASE 0x8201460
 #define TIMER_2_COUNTER_SIZE 32
 #define TIMER_2_FIXED_PERIOD 0
 #define TIMER_2_FREQ 50000000
